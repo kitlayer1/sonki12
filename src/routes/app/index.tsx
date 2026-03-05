@@ -6,7 +6,6 @@ import { Step3Favicons } from "./step3Favicons";
 import { Step4Colors } from "./step4Colors";
 import { Step5Style } from "./step5Style";
 import { Step6GeneratedLogos } from "./step6GeneratedLogos";
-import { Step7Preview } from "./step7Preview";
 
 export default component$(() => {
   const state = useStore({
@@ -270,15 +269,7 @@ export default component$(() => {
         />
       )}
 
-      {state.currentStep === 7 && (
-        <Step7Preview
-          brandName={state.brandName}
-          selectedStyleIds={state.selectedStyleIds}
-          colors={state.colors}
-          selectedFontStyleId={state.selectedFontStyleId}
-          selectedLogoIndex={state.selectedLogoIndex}
-        />
-      )}
+    
     </div>
   );
 });
