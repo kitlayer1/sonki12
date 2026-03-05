@@ -4,7 +4,6 @@ import { FAQ } from "~/components/global/faq/faq";
 import { Footer } from "~/components/global/footer/footer";
 import { HomeHeader } from "~/components/global/header/homeHeader";
 import { CategoryBrandCard } from "~/components/home/card/brandCard";
-import { HomeHero } from "~/components/home/hero/homeHero";
 import { HomeSection } from "~/components/home/section/homeSection";
 import { HomeBrandSlider } from "~/components/home/slider/homeBrandSlider";
 import { HomeTestimonial } from "~/components/home/testimonial/testimonial";
@@ -93,15 +92,7 @@ export default component$(() => {
   return (
     <>
       <HomeHeader />
-       <HomeHero
-        title="Design a Professional Logo for Your Brand"
-        description="Build a logo that makes your brand stand out. Fully customizable, high-quality, and ready for web, social media, and print."
-        subText="No credit card required • No design experience needed"
-        placeholder="Brand Name"
-        buttonText="Generate"
-        image="/images/home/hero/homeHero.svg" // kendi görselinin URL'si
-        badgeText="Chosen by 40,000+ Growing Brands"
-      />
+       
        <CategoryBrandCard />
 
        <HomeSection />
