@@ -1,0 +1,126 @@
+.footer {
+  background: #FBF6F0;
+  padding: 60px 0 40px;
+  margin-top: 80px;
+}
+
+.footer__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 0;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 70px;
+}
+
+/* LEFT */
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer__logo-box {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__logo-square {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+}
+
+.footer__logo-text {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 28px;
+}
+
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.footer__social {
+  width: 40px;
+  height: 40px;
+  background: #e5ded5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer__social:hover {
+  background: #000;
+  color: #fff;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  color: #333;
+}
+
+/* COLUMNS */
+.footer__column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer__column li {
+  font-family: "Geist-Regular", sans-serif;
+  margin-bottom: 14px;
+}
+
+.footer__column a {
+  font-family: "Geist-Regular", sans-serif;
+  text-decoration: none;
+  color: #555;
+  transition: 0.3s;
+}
+
+.footer__column a:hover {
+  color: #000;
+}
+
+/* PAYMENTS */
+.footer__payments {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer {
+    padding: 60px 20px;
+  }
+}

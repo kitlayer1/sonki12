@@ -1,0 +1,94 @@
+.product-hero {
+  padding: 160px 20px 0;
+  background-color: #F4EFE9;
+}
+
+.product-hero__inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product-hero__badge {
+  font-family: "Geist-Medium", sans-serif;
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 14px;
+  color:  var(--color-description-p1);
+  background: #EDE3DA;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.product-hero__title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: -0.84px;
+  margin-bottom: 24px;
+}
+
+.product-hero__description {
+  font-family: "Geist-Regular", sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-description-p1);
+  margin-bottom: 32px;
+}
+
+.product-hero__button {
+  font-family: "Geist-Medium", sans-serif;
+  background: var(--btn-black-bg);
+  color: var(--btn-black-text);
+  border: none;
+  border-radius: 6px;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+  margin-bottom: 28px;
+}
+
+.product-hero__button:hover {
+  background: var(--btn-black-bg-hover);
+}
+
+/* IMAGE */
+
+.product-hero__image-wrapper {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -50px;
+}
+
+.product-hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+@media (max-width: 430px) {
+  .product-hero {
+    padding: 120px 20px 0;
+  }
+
+  .product-hero__title {
+    font-size: 36px;
+  }
+
+  .product-hero__description {
+    font-size: 16px;
+  }
+
+  .product-hero__button {
+ 
+  margin-bottom: 40px;
+}
+}

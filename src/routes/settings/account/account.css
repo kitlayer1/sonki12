@@ -1,0 +1,122 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group label {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-md);
+  color: var(--color-description-p2);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* NAME SURNAME ROW */
+.name-surname-row {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.name-surname-row .form-group {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* EMAIL */
+.email-group {
+  margin-top: var(--spacing-xs);
+}
+
+/* INPUT */
+.input {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-md);
+  width: 100%;
+  height: 42px;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--input-border-grey);
+  color: var(--color-heading-h2);
+  background-color: var(--color-white);
+  transition: border 0.2s;
+  margin-bottom: var(--spacing-xl);
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--input-border-grey-focus);
+}
+
+.input:disabled {
+  background: var(--input-border-grey-bg-disabled);
+  color: var(--input-border-grey-text-disabled);
+}
+
+/* SAVE ROW */
+.save-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* BUTTON */
+.settings-save-btn {
+  height: 36px;
+  width: 80px;
+  display: flex; /* block yerine flex */
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-md);
+  font-family: "Geist-Medium", sans-serif;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--btn-black-bg);
+  color: var(--btn-black-text);
+  border: none;
+}
+
+.settings-save-btn:hover {
+  background: var(--btn-black-bg-hover);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE BREAKPOINT */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .name-surname-row {
+    flex-direction: column; /* ✅ Name ve surname alt alta */
+  }
+
+  .save-row {
+    flex-direction: column; /* ✅ Toast ve button alt alta */
+    align-items: stretch;
+  }
+
+  .settings-save-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .name-surname-row {
+    gap: 6px;
+  }
+  .input {
+    margin-bottom: 16px;
+  }
+
+  .settings-save-btn {
+    width: 100%;
+  }
+}

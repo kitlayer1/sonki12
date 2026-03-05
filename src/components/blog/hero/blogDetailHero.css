@@ -1,0 +1,165 @@
+.blog-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 160px 140px 150px 140px;
+  background: #F6F7FA;
+}
+
+.blog-hero-inner {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.blog-hero-left {
+  max-width: 640px;
+}
+
+.blog-breadcrumb {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.blog-breadcrumb span {
+  margin: 0 6px;
+}
+
+.blog-hero-date {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.blog-hero-title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 44px;
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-md);
+  margin-bottom: 24px;
+}
+
+.blog-hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-hero-image-card {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-hero-image-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* 1000px ve altı - resim aşağı insin */
+@media (max-width: 1000px) {
+  .blog-hero {
+    padding: 120px 32px 80px;
+  }
+
+  .blog-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 100%;
+  }
+
+  .blog-hero-left,
+  .blog-hero-right {
+    width: 100%;
+  }
+
+  /* SADECE 1000px ve altında resim aşağı */
+  .blog-hero-left {
+    order: 1; /* Metin yukarıda */
+  }
+
+  .blog-hero-right {
+    order: 2; /* Resim aşağıda */
+  }
+
+  .blog-hero-title {
+    font-size: 36px;
+    line-height: 1.4;
+  }
+
+  .blog-breadcrumb {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .blog-hero-date {
+    font-size: 16px;
+  }
+}
+
+/* Tablet (768px altı) */
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: 100px 30px 80px;
+  }
+
+  .blog-hero-title {
+    font-size: 30px;
+  }
+
+  .blog-breadcrumb {
+    font-size: 14px;
+  }
+
+  .blog-hero-date {
+    font-size: 14px;
+  }
+}
+
+/* Mobile (640px altı) */
+@media (max-width: 640px) {
+  .blog-hero {
+    padding: 100px 24px 80px;
+  }
+
+  .blog-hero-title {
+    font-size: 28px;
+  }
+
+  .blog-breadcrumb {
+    font-size: 13px;
+  }
+
+  .blog-hero-date {
+    font-size: 14px;
+  }
+}
+
+/* Küçük Mobile (480px altı) */
+@media (max-width: 480px) {
+  .blog-hero {
+    padding: 100px 20px 60px;
+  }
+
+  .blog-hero-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .blog-breadcrumb {
+    font-size: 13px;
+  }
+
+  .blog-hero-date {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "success": {
+    "food-brand-maker": {
+      "hero": {
+        "badge": "Custom Food Logo Design Made Simple",
+        "title": "Design Your Food Brand Logo ",
+        "description": "Create a professional food brand logo in minutes with styles tailored for restaurants, cafes and kitchens.",
+        "subText": "No design skills needed — no payment required.",
+        "img": "/images/create/landing/hero/pagesme.svg"
+      },
+
+      "categorySection": {
+        "badge": "Professional Logo Solutions",
+        "title": "Custom Food Logo Design Made Simple",
+        "description": "Build a professional and memorable food logo for your restaurant, cafe, bakery, street food concept or delivery brand with our easy online logo creator. Explore a wide range of food logo design styles, customize colors, fonts and icons, and generate high-quality logo concepts tailored to your brand identity. Whether you’re launching a new food business or refreshing your restaurant branding, you can design a unique, ready-to-use food logo in minutes without any design experience. All logos are optimized for menus, packaging, websites and social media, helping your food brand stand out and look trustworthy across every platform.",
+        "subText": "Our intuitive design tools make it easy to craft a professional logo that reflects your brand’s flavor, personality, and uniqueness. Build a professional and memorable food logo for your restaurant, cafe, bakery, street food concept or delivery brand with our easy online logo creator. Explore a wide range of food logo design styles, customize colors, fonts and icons, and generate high-quality logo concepts tailored to your brand identity. Whether you’re launching a new food business or refreshing your restaurant branding, you can design a unique, ready-to-use food logo in minutes without any design experience. All logos are optimized for menus, packaging, websites and social media, helping your food brand stand out and look trustworthy across every platform."
+      },
+
+      "categories": [
+        { "label": "Technology", "slug": "tech-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Food", "slug": "food-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+         { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Food", "slug": "food-brand-maker" }
+      ],
+
+      "banner": {
+        "title": "Automation and agents for modern finance teams",
+        "description": "From billing to revenue recognition, streamline your entire contract-to-cash process and eliminate manual work.",
+        "buttonText": "Get Started",
+        "buttonLink": "/get-started"
+      },
+
+      "slider": {
+    "title": "Automation and agents for modern finance teams",
+    "description": "From billing to revenue recognition, streamline your entire contract-to-cash process and eliminate manual work.",
+    "top": [
+      { "img": "/images/about/hero/aboutHero.svg" },
+      { "img": "/images/about/hero/aboutHero.svg" },
+       { "img": "/images/about/hero/aboutHero.svg" },
+      { "img": "/images/about/hero/aboutHero.svg" },
+       { "img": "/images/about/hero/aboutHero.svg" },
+      { "img": "/images/about/hero/aboutHero.svg" },
+      { "img": "/images/about/hero/aboutHero.svg" }
+    ]
+  }
+    },
+    "tech-brand-maker": {
+      "hero": {
+        "badge": "Get direct access to thdfdfe top B2B creators in the world",
+        "title": "Tech Brand Maker",
+        "description": "Design a futuristic and innovative logo for your tech brand with our Tech Brand Maker. Choose from a selection of modern templates and customize them to reflect your brand's cutting-edge identity.",
+        "subText": "From billing tuhujhjo revenue recognition, streamline your entire contract-to-cash process and eliminate manual work.",
+        "img": "/images/create/landing/hero/pagesme.svg"
+      },
+
+      "categorySection": {
+        "badge": "Professional Logo Solutions",
+        "title": "Build a Memorable Food Brand Identity",
+        "description": "A powerful food brand logo helps customers instantly recognize and trust your business. Whether you're launching a restaurant, cafe, bakery, or packaged food product, having a visually appealing and meaningful logo is essential for standing out in the competitive food market.",
+        "subText": "Our intuitive design tools make it easy to craft a professional logo that reflects your brand’s flavor, personality, and uniqueness."
+      },
+
+      "categories": [
+        { "label": "Technology", "slug": "tech-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Food", "slug": "food-brand-maker" }
+      ],
+
+      "banner": {
+        "title": "Automation and agents for modern finance teams",
+        "description": "From billing to revenue recognition, streamline your entire contract-to-cash process and eliminate manual work.",
+        "buttonText": "Get Started",
+        "buttonLink": "/get-started"
+      },
+
+      "slider": {
+    "title": "Automation and agents for modern finance teams",
+    "description": "From billing to revenue recognition, streamline your entire contract-to-cash process and eliminate manual work.",
+    "top": [
+      { "img": "/images/about/hero/aboutHero.svg" },
+      { "img": "/images/top2.jpg" },
+      { "img": "/images/top3.jpg" }
+    ],
+    "bottom": [
+      { "img": "/images/bottom1.jpg" },
+      { "img": "/images/bottom2.jpg" },
+      { "img": "/images/bottom3.jpg" }
+    ]
+  },
+
+      "features": [
+        "Sleek and modern logo templates",
+        "Customizable design elements to match your brand",
+        "Easy-to-use design tools for quick logo creation",
+        "High-quality logo files suitable for all platforms"
+      ]
+    },
+    "fashion-brand-maker": {
+      "hero": {
+        "badge": "Get direct access to the top B2B creators in the world",
+        "title": "Fashion Brand Maker",
+        "description": "Create a chic and stylish logo for your fashion brand with our Fashion Brand Maker. Explore a variety of trendy templates and personalize them to showcase your unique style.",
+        "subText": "From billing to revenue recognition, streamline your entire contract-to-cash process and eliminate manual work.",
+        "img": "/images/product/hero/producthero.svg"
+      },
+
+      "categorySection": {
+        "badge": "Professional Logo Solutions",
+        "title": "Build a Memorable Food Brand Identity",
+        "description": "A powerful food brand logo helps customers instantly recognize and trust your business. Whether you're launching a restaurant, cafe, bakery, or packaged food product, having a visually appealing and meaningful logo is essential for standing out in the competitive food market.",
+        "subText": "Our intuitive design tools make it easy to craft a professional logo that reflects your brand’s flavor, personality, and uniqueness."
+      },
+
+      "categories": [
+        { "label": "Technology", "slug": "tech-brand-maker" },
+        { "label": "Fashion", "slug": "fashion-brand-maker" },
+        { "label": "Food", "slug": "food-brand-maker" }
+      ],
+
+      "features": [
+        "Trendy and fashionable logo templates",
+        "Customizable fonts, colors, and icons",
+        "Intuitive design tools for effortless logo creation",
+        "High-resolution logo downloads for branding materials"
+      ]
+    },
+    "real-estate-logo-maker": {
+      "hero": {
+        "badge": "Get direct access to the top B2B creators in the world",
+        "title": "Real Estate Logo Maker",
+        "description": "Design a professional logo for your real estate business with our Real Estate Logo Maker. Choose from a selection of industry-specific templates and customize them to create a strong brand presence.",
+        "subText": "From billing to revenue recognition, streamline your entire contract-to-cash process and eliminate manual work.",
+        "img": "/images/product/hero/producthero.svg"
+      },
+      "features": [
+        "Industry-specific logo templates",
+        "Customizable design elements to reflect your brand",
+        "User-friendly interface for easy logo creation",
+        "High-quality logo files for marketing and branding"
+      ]
+    },
+    "fitness-logo-creator": {
+      "hero": {
+        "badge": "Get direct access to the top B2B creators in the world",
+        "title": "Fitness Logo Creator",
+        "description": "Create an energetic and dynamic logo for your fitness brand with our Fitness Logo Creator. Select from a variety of templates and customize them to represent your commitment to health and wellness.",
+        "subText": "From billing to revenue recognition, streamline your entire contract-to-cash process and eliminate manual work.",
+        "img": "/images/product/hero/producthero.svg"
+      },
+      "features": [
+        "Dynamic and energetic logo templates",
+        "Customizable colors, fonts, and icons",
+        "Easy-to-use design tools for quick logo creation",
+        "High-resolution logo downloads for branding materials"
+      ]
+    }
+  },
+  "fail": false,
+  "status": 200
+}

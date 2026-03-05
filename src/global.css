@@ -1,0 +1,344 @@
+/* =========================
+   Normalize / Reset (Modern)
+   ========================= */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* HTML & body defaults */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  color: #020617;
+}
+
+/* Media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements inherit font */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Button reset */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lists */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Forms */
+textarea {
+  resize: vertical;
+}
+
+/* Remove animations for people who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #FFFCF7;
+  font-family: "Rubik", sans-serif;
+}
+
+@font-face {
+  font-family: "Geist-Light";
+  src: url("/fonts/geist/Geist-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist-Regular";
+  src: url("/fonts/geist/Geist-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist-Medium";
+  src: url("/fonts/geist/Geist-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist-SemiBold";
+  src: url("/fonts/geist/Geist-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist-Bold";
+  src: url("/fonts/geist/Geist-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hidayatullah';
+  src: url('/fonts/classic/hida/hidayatullah.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mexican-Tequila';
+  src: url('/fonts/classic/mexican/MexicanTequila.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Starlight-Romance';
+  src: url('/fonts/classic/starlight/Starlight-Romance.ttf') format('truetype');
+}
+
+
+
+ 
+:root {
+
+  --color-white: #ffffff;
+
+
+  --color-border-b1: #f0f1f4;
+  --color-border-b2: #EAEBEF;
+  --color-border-b3: #DADCE3;
+
+  --color-heading-h1: #020618;
+  --color-heading-h2: #0f172b;
+  --color-heading-h3: #1d293d;
+
+  --color-description-p1: #314158;
+  --color-description-p2: #45556c;
+  --color-description-p3: #62748e;
+
+  /* Renkler */
+  --primary-50: #fffbea;
+  --primary-100: #fef3c7;
+  --primary-200: #fde68a;
+  --primary-300: #fcd34d;
+  --primary-400: #fbbf24;
+  --primary-500: #f59e0b;
+  --primary-600: #d97706;
+  --primary-700: #b45309;
+  --primary-800: #92400e;
+  --primary-900: #78350f;
+
+  --warning-50: #fff7ed;
+  --warning-100: #ffedd4;
+  --warning-200: #ffd6a7;
+  --warning-300: #ffb86a;
+  --warning-400: #ff8904;
+  --warning-500: #ff6900;
+  --warning-600: #f54900;
+  --warning-700: #ca3500;
+  --warning-800: #9f2d00;
+  --warning-900: #7e2a0c;
+  --warning-950: #441306;
+
+  --error-50: #fff1f2;
+  --error-100: #ffe4e6;
+  --error-200: #ffccd3;
+  --error-300: #ffa1ad;
+  --error-400: #ff637e;
+  --error-500: #ff2056;
+  --error-600: #ec003f;
+  --error-700: #c70036;
+  --error-800: #a50036;
+  --error-900: #8b0836;
+  --error-950: #4d0218;
+
+  --success-50: #ecfdf5;
+  --success-100: #d0fae5;
+  --success-200: #a4f4cf;
+  --success-300: #5ee9b5;
+  --success-400: #00d492;
+  --success-500: #00bc7d;
+  --success-600: #009966;
+  --success-700: #007a55;
+  --success-800: #006045;
+  --success-900: #004f3b;
+  --success-950: #002c22;
+
+  --info-50: #f9f5ff;
+  --info-100: #f1e8ff;
+  --info-200: #e5d5ff;
+  --info-300: #d1b4fe;
+  --info-400: #b484fc;
+  --info-500: #9855f7;
+  --info-600: #8133ea;
+  --info-700: #6d22ce;
+  --info-800: #5e21a8;
+  --info-900: #4d1c87;
+  --info-950: #320764;
+
+  --grey-50: #f0f1f4;
+  --grey-100: #eaebef;
+  --grey-200: #dadce3;
+  --grey-300: #c0c5d0;
+  --grey-400: #a1a7b9;
+  --grey-500: #8a90a7;
+  --grey-600: #797c97;
+  --grey-700: #6c6f89;
+  --grey-800: #5b5d72;
+  --grey-900: #4c4d5c;
+  --grey-950: #31313a;
+
+  /* Buton */
+  --btn-black-bg: #0c0c29;
+  --btn-black-text: #f0f1f4;
+  --btn-black-bg-hover: #131343;
+  --btn-black-text-hover: #f0f1f4;
+  --btn-black-bg-disabled:#6c6f89;
+
+  --btn-white-bg: #f0f1f4;
+  --btn-white-text: #0c0c29;
+  --btn-white-bg-hover: #dadce3;
+  --btn-white-text-hover: #0c0c29;
+
+  --btn-border-bg: #f0f1f4;
+  --btn-border-text: #0c0c29;
+  --btn-border-bg-hover: #f0f1f4;
+  --btn-border-text-hover: #0c0c29;
+
+  /* Input */
+  --input-border-grey: #EAEBEF;
+  --input-border-grey-focus: #6c6f89;
+  --input-border-grey-bg-disabled: #f0f1f4;
+  --input-border-grey-text-disabled: #c0c5d0;
+  --input-black-bg-hover: #131343;
+  --input-black-text-hover: #ffffff;
+ 
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  /* Font boyutları */
+  --font-size-2xs: 12px;
+  --font-size-xs: 14px;
+  --font-size-xsm: 15px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 28px;
+  --font-size-2xxl: 30px;
+  --font-size-3xl: 32px;
+  --font-size-3xxl: 40px;
+  --font-size-4xl: 44px;
+  --font-size-4xxl: 54px;
+
+  /* Line-height */
+  --line-height-xxs: 1.2;
+  --line-height-xs: 1.4;
+  --line-height-sm: 1.5;
+  --line-height-md: 1.8;
+  --line-height-lg: 2;
+  --line-height-xl: 2.2;
+
+  /* Spacing */
+  --letter-spacing-xs: 0px;
+  --letter-spacing-sm: -0.1px;
+  --letter-spacing-md: -0.24px;
+  --letter-spacing-lg: -0.4px;
+  --letter-spacing-xl: -0.6px;
+  --letter-spacing-2xl: -0.64px;
+  
+
+  /* Margin / Padding */
+  --spacing-2xs: 4px;
+  --spacing-xs: 6px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-lx: 22px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 63px;
+  --spacing-4xl: 80px;
+}
+
+

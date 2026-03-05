@@ -1,0 +1,51 @@
+{
+  "success": {
+    "/": {
+      "title": "Create Your Professional Logo Instantly | Kitlayer",
+      "description": "Design, customize, and download your brand’s logo in minutes. Easy, fast, and high-quality logos ready for websites, social media, and print."
+    },
+    "/about": {
+      "title": "About Kitlayer – Empowering Brands with Design",
+      "description": "Discover how Kitlayer helps entrepreneurs and businesses create professional logos effortlessly. Learn about our mission, vision, and commitment to empowering modern brands."
+    },
+    "/product": {
+      "title": "Design Your Perfect Logo in Minutes | Kitlayer",
+      "description": "Generate unique logo ideas, refine every detail with ease, and download ready-to-use, high-quality logo files. No design skills required."
+    },
+
+    "/blog": {
+      "title": "Blog – Tips, Guides & Insights | Kitlayer",
+      "description": "Read expert advice, creative tips, and industry insights on logo creation and branding. Learn strategies to make your brand stand out."
+    },
+
+    "/app": {
+      "title": "Free Logo Maker - Get Custom Logo Designs in Minutes | Kitlayer",
+      "description": "Turn your brand vision into a professional logo in minutes. AI tools guide you from concept to high-resolution files, all within the app."
+    },
+    "/create/food-brand-maker": {
+      "title": "Food Brand Maker",
+      "description": "Create stunning food brand logos that capture the essence of your culinary vision. Our Food Brand Maker offers a variety of templates and customization options to help you design a logo that stands out in the food industry."
+    },
+    "/create/tech-brand-maker": {
+      "title": "Tech Brand Maker",
+      "description": "Design a futuristic and innovative logo for your tech brand with our Tech Brand Maker. Choose from a selection of modern templates and customize them to reflect your brand's cutting-edge identity."
+    },
+    "/create/fashion-brand-maker": {
+      "title": "Fashion Brand Maker",
+      "description": "Create a chic and stylish logo for your fashion brand with our Fashion Brand Maker. Explore a variety of trendy templates and personalize them to showcase your unique style."
+    },
+    "/create/real-estate-logo-maker": {
+      "title": "Real Estate Logo Maker",
+      "description": "Design a professional logo for your real estate business with our Real Estate Logo Maker. Choose from a selection of industry-specific templates and customize them to create a strong brand presence."
+    },
+    "/create/fitness-logo-creator": {
+      "title": "Fitness Logo Creator",
+      "description": "Create an energetic and dynamic logo for your fitness brand with our Fitness Logo Creator. Select from a variety of templates and customize them to represent your commitment to health and wellness."
+    },
+
+    "/blog/2026-logo-design-trends": {
+      "title": "2026 Logo Design Trends",
+      "description": "Explore the latest logo design trends shaping the future of branding in 2026."
+    }
+  }
+}

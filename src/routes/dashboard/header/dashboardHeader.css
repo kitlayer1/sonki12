@@ -1,0 +1,238 @@
+.dashboard-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-header-content {
+  width: 100%;
+  padding: 14px 32px;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border-b1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo */
+.dashboard-header-left img {
+  width: 80px;
+}
+
+/* Right */
+.dashboard-header-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* User Icon */
+.dashboard-user-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-b1);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dashboard-user-icon:hover {
+  background: var(--color-border-b1);
+}
+
+.dashboard-user-icon svg {
+  color: var(--btn-black-bg);
+}
+
+/* USER MENU */
+.dashboard-user-menu-modal {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 240px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-b1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  z-index: 1000;
+}
+
+/* Section Title */
+.dashboard-user-menu-section-title {
+  font-family: "Geist-SemiBold", sans-serif;
+  padding: 10px 20px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-xl);
+  color: var(--color-heading);
+}
+
+/* Divider */
+.dashboard-user-menu-divider {
+  height: 1px;
+  background: var(--color-border-b1);
+  margin: 0;
+}
+
+/* Item */
+.dashboard-user-menu-item {
+  font-family: "Geist-Medium", sans-serif;
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-md);
+  font-size: var(--font-size-xs);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--color-heading-h1);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  max-height: 40px;
+}
+
+.dashboard-user-menu-item:hover {
+  background: var(--color-border-b1);
+}
+
+/* Logout */
+.dashboard-user-menu-item.logout {
+  color: var(--error-700);
+}
+
+.dashboard-user-menu-item.logout:hover {
+  background: var(--error-50);
+}
+
+/* MENU ITEM SVG */
+.dashboard-user-menu-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-heading-h1);
+  transition: color 0.2s ease;
+}
+
+/* Hover durumunda icon rengi */
+.dashboard-user-menu-item:hover svg {
+  color: var(--color-heading-h1);
+}
+
+/* Logout icon özel renk */
+.dashboard-user-menu-item.logout svg {
+  color: var(--error-700);
+}
+
+.dashboard-user-menu-item.logout:hover svg {
+  color: var(--error-700);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* Tablet - 768px altı */
+@media (max-width: 768px) {
+  .dashboard-header-content {
+    padding: 12px 24px;
+  }
+
+  .dashboard-header-left img {
+    width: 70px;
+  }
+
+  .dashboard-user-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dashboard-user-menu-modal {
+    width: 220px;
+    top: 42px;
+  }
+}
+
+/* Mobil - 480px altı */
+@media (max-width: 480px) {
+  .dashboard-header-content {
+    padding: 10px 20px;
+  }
+
+  .dashboard-header-left img {
+    width: 60px;
+  }
+
+  .dashboard-user-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dashboard-user-menu-modal {
+    width: 200px;
+    top: 40px;
+    right: -5px; /* Sağa hafif kaydır */
+  }
+
+  .dashboard-user-menu-section-title {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  .dashboard-user-menu-item {
+    padding: 10px 16px;
+    font-size: 12px;
+    max-height: 36px;
+  }
+
+  .dashboard-user-menu-item svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Küçük Mobil - 360px altı */
+@media (max-width: 430px) {
+  .dashboard-header-content {
+    padding: 12px 20px;
+  }
+
+  .dashboard-header-left img {
+    width: 55px;
+  }
+
+  .dashboard-user-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .dashboard-user-menu-modal {
+    top: 38px;
+    right: -8px;
+  }
+
+  .dashboard-user-menu-section-title {
+    padding: 6px 12px;
+  }
+
+  .dashboard-user-menu-item {
+    padding: 8px 12px;
+    font-size: 11px;
+    max-height: 32px;
+    gap: 8px;
+  }
+
+  .dashboard-user-menu-item svg {
+    width: 14px;
+    height: 14px;
+  }
+}

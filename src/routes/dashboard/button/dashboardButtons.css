@@ -1,0 +1,283 @@
+.dashboard-toolbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) 0;
+}
+
+/* FULL WIDTH BORDER */
+.dashboard-toolbar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: var(--color-border-b1);
+}
+
+/* LEFT / RIGHT GROUPS */
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.toolbar-left::-webkit-scrollbar {
+  display: none;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+/* BASE BUTTON */
+.toolbar-btn {
+  font-family: "Geist-Medium", sans-serif;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-2xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* GHOST STYLE */
+.toolbar-btn.ghost {
+  background: transparent;
+  border: 1px solid var(--color-border-b1);
+  color: var(--color-heading);
+}
+
+.toolbar-btn.ghost:hover {
+  background-color: var(--color-border-b1);
+}
+
+.toolbar-btn.active {
+  background-color: var(--grey-50);
+  border-color: var(--color-border-b1);
+}
+
+/* ICON BUTTONS (RIGHT) */
+.toolbar-btn.primary {
+  height: 32px;
+  background: var(--btn-black-bg);
+  color: var(--btn-black-text);
+  display: inline-flex;
+  padding: 0 var(--spacing-md);
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.toolbar-btn.primary:hover {
+  background-color: var(--btn-black-bg-hover);
+}
+
+.toolbar-icon {
+  flex-shrink: 0;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .toolbar-left {
+    gap: var(--spacing-xs);
+  }
+
+  .toolbar-btn {
+    padding: 0 var(--spacing-sm);
+    font-size: 13px;
+  }
+
+  .toolbar-btn.primary {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* Mobil - 640px (New Logo butonu üstte, badge'ler altta) */
+@media (max-width: 640px) {
+  .dashboard-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+  }
+
+  .dashboard-toolbar::after {
+    display: none;
+  }
+
+  .toolbar-left {
+    order: 2;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: var(--spacing-xs);
+    width: 100%;
+    padding: var(--spacing-md) 0 var(--spacing-xs) 0;
+    border-top: 1px solid var(--color-border-b1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .toolbar-left::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toolbar-right {
+    order: 1;
+    justify-content: center;
+    width: 100%;
+    padding: 0 var(--spacing-sm); /* Yanlardan padding */
+    box-sizing: border-box;
+  }
+
+  .toolbar-btn {
+    height: 36px;
+    padding: 0 var(--spacing-md);
+    font-size: 14px;
+  }
+
+  .toolbar-btn.primary {
+    width: 100%; /* Tam genişlik */
+    max-width: 100%; /* Maksimum genişlik kaldırıldı */
+    justify-content: center;
+    height: 44px;
+    font-size: 15px;
+    margin: 0; /* Margin sıfır */
+  }
+
+  .toolbar-btn.ghost {
+    flex: 0 0 auto;
+    min-width: 70px;
+    justify-content: center;
+  }
+}
+
+/* Küçük Mobil - 480px */
+@media (max-width: 480px) {
+  .toolbar-left {
+    gap: 8px;
+    padding: var(--spacing-md) 0 var(--spacing-xs) 0;
+  }
+
+  .toolbar-btn {
+    height: 34px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .toolbar-btn.ghost {
+    min-width: 60px;
+  }
+
+  .toolbar-btn.primary {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .toolbar-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .toolbar-right {
+    padding: 0 var(--spacing-xs);
+  }
+}
+
+/* Çok Küçük Mobil - 430px */
+@media (max-width: 430px) {
+  .toolbar-left {
+    gap: 8px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0;
+  }
+
+  .toolbar-left::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toolbar-btn {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .toolbar-btn.ghost {
+    min-width: 60px;
+    padding: 0 8px;
+  }
+
+  .toolbar-btn.primary {
+    height: 42px;
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .toolbar-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .toolbar-right {
+    padding: 0 var(--spacing-xs);
+  }
+}
+
+/* Ekstra küçük - 360px */
+@media (max-width: 360px) {
+  .toolbar-left {
+    gap: 6px;
+  }
+  
+  .toolbar-btn {
+    padding: 0 8px;
+    font-size: 11px;
+    height: 34px;
+  }
+  
+  .toolbar-btn.ghost {
+    min-width: 55px;
+    padding: 0 6px;
+  }
+  
+  .toolbar-btn.primary {
+    height: 40px;
+    font-size: 12px;
+  }
+  
+  .toolbar-icon {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .toolbar-right {
+    padding: 0 8px;
+  }
+}

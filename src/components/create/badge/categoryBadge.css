@@ -1,0 +1,94 @@
+.category-badge-wrapper {
+  max-width: 1160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin: 0 auto;
+}
+
+.category-badge-item {
+  font-family: "Geist-Medium", sans-serif;
+  height: 44px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  background: transparent;
+  border: 1px solid var(--color-border-b1);
+  color: var(--color-heading);
+  display: inline-flex;
+  padding: 0 var(--font-size-xl);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  align-items: center;
+}
+
+.category-badge-item:hover {
+  background-color: var(--color-border-b1);
+}
+
+@media (max-width: 1300px) {
+.category-badge-wrapper {
+    padding: 32px;
+    gap: 16px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .category-badge-wrapper {
+    padding: 32px;
+    gap: 16px;
+  }
+
+  .category-badge-item {
+    height: 42px;
+     font-size: var( --font-size-xsm);
+    padding: 0 30px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .category-badge-wrapper {
+    padding: 30px;
+    gap: 14px;
+  }
+
+  .category-badge-item {
+    height: 42px;
+     font-size: var( --font-size-xs);
+    padding: 0 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  
+  .category-badge-wrapper {
+    padding: 24px;
+    gap: 14px;
+  }
+
+  .category-badge-item {
+    height: 40px;
+    font-size: var( --font-size-xs);
+    padding: 4px 24px;
+  }
+}
+
+@media (max-width: 430px) {
+  
+  .category-badge-wrapper {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .category-badge-item {
+    height: 38px;
+    font-size: var( --font-size-xs);
+    padding: 4px 24px;
+  }
+}

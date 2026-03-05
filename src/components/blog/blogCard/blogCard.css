@@ -1,0 +1,152 @@
+/* ================= BLOG GRID ================= */
+
+.blog-grid {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 120px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+
+
+/* ================= BLOG CARD ================= */
+
+.blog-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* ================= IMAGE ================= */
+
+.blog-card-image-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  aspect-ratio: 16 / 9; /* Modern responsive çözüm */
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-card-image {
+  transform: scale(1.05);
+}
+
+
+/* ================= CONTENT ================= */
+
+.blog-card-content {
+  padding-right: 8px;
+}
+
+.blog-card-badge {
+  display: inline-block;
+  background: #e9eefc;
+  color: #5b6ee1;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.blog-card-title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #020618;
+  margin: 0 0 16px 0;
+  transition: color 0.2s ease;
+}
+
+.blog-card:hover .blog-card-title {
+  color: #5b6ee1;
+}
+
+.blog-card-date {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+
+/* ================= SMALL MOBILE OPTIMIZATION ================= */
+@media (max-width: 1200px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 120px 32px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 120px 32px;
+    gap: 24px;
+  }
+}
+
+
+/* Large Tablet */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 120px 30px;
+    gap: 24px;
+  }
+}
+
+
+
+@media (max-width: 640px) {
+  .blog-grid {
+    padding: 100px 24px;
+       grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  .blog-card-title {
+    font-size: 20px;
+  }
+
+  .blog-card-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .blog-card-date {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 430px) {
+  .blog-grid {
+    padding: 100px 20px;
+  }
+  .blog-card-title {
+    font-size: 18px;
+  }
+
+  .blog-card-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .blog-card-date {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,215 @@
+.blog-detail-container {
+  max-width: 1160px;
+  margin: 60px auto;
+  
+}
+
+/* BLOG TITLE - Eksik olan sınıf eklendi */
+.blog-detail-title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--color-heading-h1);
+  margin-bottom: 24px;
+}
+
+/* BLOG META INFO (tarih, yazar vb için) */
+.blog-detail-meta {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+/* BODY */
+.blog-detail-body {
+  
+  margin: 0 auto;
+}
+
+.blog-detail-body p {
+  font-family: "Geist-Regular", sans-serif;
+  color: var(--color-description-p1);
+  font-size: 16px;
+  line-height: 1.6; /* Okunabilirlik için artırıldı */
+  margin-bottom: 24px;
+}
+
+.blog-detail-body h1,
+.blog-detail-body h2 {
+  font-family: "Geist-SemiBold", sans-serif;
+  color: var(--color-heading-h1);
+  font-size: 24px;
+  margin: 40px 0 16px 0; /* Üst margin artırıldı */
+}
+
+.blog-detail-body h3 {
+  font-family: "Geist-SemiBold", sans-serif;
+  color: var(--color-heading-h1);
+  font-size: 20px;
+  margin: 32px 0 12px 0;
+}
+
+/* IMAGE BLOCK */
+.blog-detail-image-block {
+  margin: 40px 0;
+}
+
+.blog-detail-image-block img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.blog-detail-image-block figcaption {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 10px;
+  text-align: center; /* Genellikle caption ortalanır */
+}
+
+/* IMAGE WRAPPER - Eksik olan sınıf eklendi */
+.blog-detail-image-wrapper {
+  width: 100%;
+  height: 400px; /* Varsayılan yükseklik */
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.blog-detail-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NOT FOUND */
+.not-found {
+  text-align: center;
+  padding: 200px 0;
+  font-size: 20px;
+  color: #6b7280;
+}
+
+/* QUOTE BLOCK (isteğe bağlı) */
+.blog-detail-body blockquote {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-heading-h1);
+  border-left: 4px solid #ddd;
+  padding: 20px 0 20px 30px;
+  margin: 40px 0;
+  font-style: italic;
+}
+
+/* LIST STYLES (isteğe bağlı) */
+.blog-detail-body ul,
+.blog-detail-body ol {
+  margin: 20px 0 30px 20px;
+  color: var(--color-description-p1);
+  line-height: 1.6;
+}
+
+.blog-detail-body li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+  .blog-detail-container {
+    margin: 60px auto 100px auto;
+    padding: 0 32px;
+  }
+  
+  .blog-detail-title {
+    font-size: 36px;
+  }
+  
+  .blog-detail-image-wrapper {
+    height: 350px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 1000px) {
+  .blog-detail-container {
+    margin: 60px auto 100px auto;
+    padding: 0 30px;
+  }
+  
+  .blog-detail-title {
+    font-size: 36px;
+  }
+  
+  .blog-detail-image-wrapper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-detail-container {
+    margin: 40px auto 80px auto;
+    padding: 0 30px;
+  }
+  
+  .blog-detail-title {
+    font-size: 28px;
+  }
+  
+  .blog-detail-meta {
+    font-size: 14px;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .blog-detail-body p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .blog-detail-body h1,
+  .blog-detail-body h2 {
+    font-size: 22px;
+    margin: 32px 0 12px 0;
+  }
+  
+  .blog-detail-image-wrapper {
+    height: 280px; /* Burada kullanılıyor */
+  }
+  
+  .blog-detail-image-block {
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-detail-container {
+    margin: 40px auto 80px auto;
+    padding: 0 24px;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .blog-detail-container {
+    padding: 0 20px;
+    margin: 30px auto 60px auto;
+  }
+  
+  .blog-detail-title {
+    font-size: 24px;
+  }
+  
+  .blog-detail-body p {
+    font-size: 14px;
+  }
+  
+  .blog-detail-body h1,
+  .blog-detail-body h2 {
+    font-size: 20px;
+  }
+  
+  .blog-detail-image-wrapper {
+    height: 200px;
+  }
+}

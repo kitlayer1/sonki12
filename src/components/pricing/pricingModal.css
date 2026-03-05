@@ -1,0 +1,272 @@
+/* src/components/PricingModal.css */
+.pricing-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.pricing-modal {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  border-radius: 8px;
+  padding:  24px 24px;
+  z-index: 1;
+  animation: fadeScale 0.25s ease;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pricing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.pricing-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: #f5f5f5;
+}
+
+.pricing-body {
+  display: flex;
+  gap: 24px;
+}
+
+.plan {
+  flex: 1;
+  border-radius:8px;
+  padding: 32px 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.plan.premium {
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.plan.premium:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.plan.brand-kit {
+  border: 2px solid #000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  background: white;
+}
+
+.plan.brand-kit:hover {
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #000;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.plan h4 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.plan-subtitle {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.price-container {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.price-period {
+  font-size: 14px;
+  color: #666;
+}
+
+.old-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+  margin-bottom: 16px;
+}
+
+.select-btn {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.2s ease;
+  margin-bottom: 24px;
+}
+
+.select-btn:hover {
+  background: #333;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.features-list li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #333;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.features-list li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.features-list .recently-added {
+  color: #000;
+  font-weight: 500;
+}
+
+.features-list .recently-added::before {
+  content: "✨";
+  color: #000;
+  font-size: 14px;
+}
+
+.features-list .single-page::before {
+  content: "•";
+  font-size: 20px;
+  color: #666;
+}
+
+.additional-feature {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eaeaea;
+  margin-top: 8px;
+  padding-top: 16px;
+}
+
+.check-icon {
+  margin-right: 10px;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-modal {
+    padding: 24px;
+    max-width: 500px;
+  }
+
+  .pricing-body {
+    flex-direction: column;
+  }
+
+  .pricing-header h3 {
+    font-size: 24px;
+  }
+
+  .badge {
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-modal {
+    padding: 20px;
+  }
+
+  .plan {
+    padding: 24px 16px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+}

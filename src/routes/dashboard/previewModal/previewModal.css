@@ -1,0 +1,405 @@
+/* Modal açıkken body ve html tamamen sabitlenir */
+body.modal-open {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  -webkit-overflow-scrolling: auto !important; /* iOS için */
+  touch-action: none !important; /* Dokunmatik hareketleri engelle */
+}
+
+/* HTML elementini de sabitle */
+html:has(body.modal-open) {
+  overflow: hidden !important;
+  height: 100% !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+.logo-preview-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.logo-preview-modal {
+  width: 1100px;
+  height: 600px;
+  background: var(--grey-50);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
+  /* Responsive geçişler için yumuşak animasyon */
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-header {
+  max-height: 52px;
+  padding: var(--spacing-lg) var(--spacing-lx);
+  background: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-b2);
+}
+
+.modal-header h3 {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-lg);
+  color: var(--color-heading);
+  
+  /* Uzun isimler için */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border-b1);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-heading-h1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0; /* Butonun küçülmesini engelle */
+}
+
+.close-btn:hover {
+  background: var(--btn-border-bg-hover);
+  border-color: var(--btn-border-bg-hover);
+}
+
+.close-btn:active {
+  background: var(--btn-border-bg-active);
+}
+
+.modal-body {
+  display: flex;
+  flex: 1;
+  overflow-y: auto; /* İçerik uzunsa scroll */
+}
+
+.modal-preview {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-box {
+  background: var(--grey-50);
+  border-radius: var(--radius-xl);
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.3s ease;
+}
+
+.preview-box.transparent {
+  background: repeating-conic-gradient(#eee 0 25%, #fff 0 50%) 50% / 20px 20px;
+}
+
+.svg-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.svg-preview svg {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+}
+
+.no-svg-placeholder {
+  color: var(--color-description-p1);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  padding: 20px;
+}
+
+.preview-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Mobilde alt alta geçmesi için */
+}
+
+.preview-tabs button {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: var(--font-size-xs);
+  color: var(--color-heading-h1);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-md);
+  padding: var(--spacing-xs) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--grey-200);
+  background: var(--grey-100);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* Yazıların satır atlamasını engelle */
+}
+
+.preview-tabs button:hover {
+  background: var(--btn-black-bg);
+  color: var(--color-white);
+}
+
+.preview-tabs .active {
+  background: var(--btn-black-bg);
+  color: var(--color-white);
+}
+
+.modal-info {
+  width: 450px;
+  background: var(--color-white);
+  padding: var(--spacing-lx);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* İçerik uzunsa scroll */
+  flex-shrink: 0; /* Daralmaması için */
+}
+
+.file-types span {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: 1px solid var(--color-border-b1);
+  border-radius: var(--radius-md);
+  margin-right: var(--radius-md);
+}
+
+.modal-info h4 {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-xl);
+  color: var(--color-heading-h1);
+  margin-bottom: var(--spacing-md);
+}
+
+.modal-info p {
+  font-family: "Geist-Regular", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-md);
+  color: var(--color-description-p1);
+  margin-bottom: var(--spacing-xl);
+}
+
+.modal-info h5 {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-xl);
+  color: var(--color-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.file-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2xs);
+}
+
+.file-types span {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: var(--font-size-2xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-description-p1);
+  border: 1px solid var(--color-border-b1);
+  line-height: 1;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.file-types span:hover {
+  background: var(--color-white);
+  color: var(--color-description-p1);
+}
+
+.free-box {
+  margin-top: 120px;
+  background: var(--info-50);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.free-box strong {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-lg);
+  color: var(--info-900);
+  display: block;
+  margin-bottom: var(--spacing-2xs);
+}
+
+.free-box p {
+  font-family: "Geist-Regular", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-lg);
+  color: var(--info-800);
+  max-width: 200px;
+  margin: 0;
+}
+
+.upgrade-btn {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-md);
+  background: var(--info-900);
+  color: var(--info-50);
+  border: none;
+  padding: 9px var(--spacing-lg);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upgrade-btn:hover {
+  background: var(--info-800);
+  color: var(--info-50);
+}
+
+.modal-edit-btn {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: var(--btn-border-bg);
+  color: var(--btn-border-text);
+  margin-bottom: 12px;
+  margin-top: auto;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-edit-btn:hover {
+  background: var(--color-border-b2);
+}
+
+.download-btn {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: var(--btn-black-bg);
+  color: var(--btn-black-text);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background: var(--btn-black-bg-hover);
+  color: var(--btn-black-text-hover);
+}
+
+/* Responsive Tasarım - 1000px ve altı */
+@media screen and (max-width: 1000px) {
+  .logo-preview-modal {
+    width: 95%;
+    max-width: 600px;
+    height: 90vh; /* Viewport yüksekliğinin %90'ı */
+    max-height: 90vh; /* Maksimum yükseklik de %90 */
+    margin: 20px;
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-preview {
+    padding: 24px 24px 16px 24px; /* Alt padding azaltıldı */
+    min-height: auto; /* Minimum yükseklik kaldırıldı */
+  }
+
+  .preview-box {
+    height: 240px; /* Yükseklik azaltıldı: 280px -> 240px */
+  }
+
+  .svg-preview svg {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .preview-tabs {
+    margin-top: var(--spacing-md);
+    gap: var(--spacing-2xs);
+  }
+
+  .preview-tabs button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: calc(var(--font-size-xs) - 1px);
+  }
+
+  .modal-info {
+    width: 100%;
+    padding: var(--spacing-lg);
+  }
+
+  .free-box {
+    margin-top: 30px; /* Biraz daha azaltıldı: 40px -> 30px */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .free-box p {
+    max-width: 100%;
+  }
+
+  .upgrade-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-header h3 {
+    max-width: 150px;
+  }
+}
+

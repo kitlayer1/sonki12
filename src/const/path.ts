@@ -1,0 +1,1 @@
+ export const DATA = "http://localhost:5173/data";
