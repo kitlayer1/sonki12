@@ -1,0 +1,216 @@
+.comment-section {
+  padding: 150px 24px;
+  background-color: #FFFCF7;
+  text-align: center;
+}
+
+.comment-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Üst başlık */
+.comment-header h2 {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -0.84px;
+  color: var(--color-heading-h1);
+  margin-bottom: 16px;
+}
+
+/* Grid yapısı */
+.comment-grid {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  text-align: left;
+}
+
+/* Kart tasarımı */
+.comment-card {
+  border-radius: 8px;
+  min-height: 210px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+/* Kart metni */
+.comment-text {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+/* Footer (avatar + isim) */
+.comment-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-name {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.comment-title {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+
+@media (max-width: 1300px) {
+  .comment-section {
+    padding: 150px 32px 80px 32px;
+   
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .comment-section {
+    padding: 160px 32px 80px 32px;
+    text-align: center;
+  }
+  .comment-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2’li kolon */
+  }
+
+  .comment-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comment-section {
+    padding: 100px 0 50px 30px;
+  }
+
+  .comment-header {
+    margin-bottom: 32px; /* H2 ile kartlar arası boşluk */
+  }
+
+  .comment-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scrollbar-width: none;
+  }
+
+  .comment-header h2 {
+    font-size: 36px;
+  }
+
+  .comment-card {
+    max-width: 420px;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  .comment-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 640px) {
+  .comment-section {
+    padding: 90px 0 45px 24px;
+  }
+
+  .comment-header {
+    margin-bottom: 32px; /* H2 ile kartlar arası boşluk */
+  }
+
+  .comment-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+  }
+
+  .comment-header h2 {
+    font-size: 32px;
+    margin: 0 24px 0 0;
+  }
+
+  .comment-card {
+    max-width: 380px;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  .comment-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Maksimum 2 satır */
+    -webkit-box-orient: vertical;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 430px) {
+  .comment-section {
+    padding: 84px  0  0 20px ;
+  }
+
+  .comment-header {
+    margin-bottom: 32px; /* H2 ile kartlar arası boşluk */
+  }
+
+  .comment-header h2 {
+    font-size: 30px;
+    margin: 0 20px 0 0;
+  }
+
+  .comment-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+  }
+
+  .comment-card {
+    max-width: 330px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    padding: 16px;
+  }
+}
