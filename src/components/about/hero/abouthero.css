@@ -1,0 +1,147 @@
+.about-hero {
+  background-color: #FFFCF7;
+  padding: 160px 20px;
+  text-align: center;
+}
+
+.about-hero-container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.about-hero-title {
+      font-family: "Geist-SemiBold", sans-serif;
+  line-height: 1.1;
+  letter-spacing: -0.84px;
+  font-size: 42px;
+  margin-bottom: 16px;
+  color: var(--color-heading-h1);
+}
+
+.about-hero-subtitle {
+     font-family: "Geist-Medium", sans-serif;
+  font-size:16px;
+  color: var(--color-description-p1);
+  max-width: 700px;
+  margin: 0 auto 32px auto;
+  line-height: 1.6;
+}
+
+.about-hero-cards {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  background: #FFFCF7;
+  border: 1px solid #E0DDD9;
+  padding: 32px 24px;
+  width: 480px;
+  text-align: left;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.about-card-header h3 {
+    font-family: "Geist-Medium", sans-serif;
+  font-size: 22px;
+  margin: 0;
+  color: var( --color-heading-h1);
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.about-card p {
+font-family: "Geist-Regular", sans-serif;
+  font-size: 15px;
+  color: var(--color-description-p1);
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.about-btn {
+  background-color: var(--btn-black-bg);
+  color: var(--btn-black-text);
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: var( --btn-black-bg-hover);
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+   .about-hero {
+  padding: 140px 32px;
+}
+  .about-hero-title {
+    font-size: 40px;
+  }
+
+  .about-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+  padding: 120px 30px;
+}
+  .about-hero-title {
+    font-size: 36px;
+  }
+
+  .about-card {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .about-hero {
+  padding: 120px 24px;
+}
+  .about-hero-title {
+    font-size: 34px;
+  }
+
+  .about-card {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 430px) {
+  .about-hero {
+  padding: 100px 20px;
+}
+  .about-hero-title {
+    font-size: 32px;
+  }
+
+  .about-card {
+    width: 100%;
+  }
+}
