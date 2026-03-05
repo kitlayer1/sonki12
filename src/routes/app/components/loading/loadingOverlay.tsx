@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import "./LoadingOverlay.css";
+import "./loadingOverlay.css";
 
 export const LoadingOverlay = component$(() => {
   return (
