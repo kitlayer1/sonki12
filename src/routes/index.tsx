@@ -3,11 +3,11 @@ import Comment from "~/components/global/comment/comment";
 import { FAQ } from "~/components/global/faq/faq";
 import { Footer } from "~/components/global/footer/footer";
 import { HomeHeader } from "~/components/global/header/homeHeader";
-import { CategoryBrandCard } from "~/components/router-head/home/card/brandCard";
-import { HomeHero } from "~/components/router-head/home/hero/homeHero";
-import { HomeSection } from "~/components/router-head/home/section/homeSection";
-import { HomeBrandSlider } from "~/components/router-head/home/slider/homeBrandSlider";
-import { HomeTestimonial } from "~/components/router-head/home/testimonial/testimonial";
+import { CategoryBrandCard } from "~/components/home/card/brandCard";
+import { HomeHero } from "~/components/home/hero/homeHero";
+import { HomeSection } from "~/components/home/section/homeSection";
+import { HomeBrandSlider } from "~/components/home/slider/homeBrandSlider";
+import { HomeTestimonial } from "~/components/home/testimonial/testimonial";
 
 
 const comments = [
