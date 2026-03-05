@@ -1,7 +1,7 @@
 // src/components/pricing/pricingModal.tsx
 import { component$, $ } from "@builder.io/qwik";
 import { supabase } from "~/lib/supabaseClient";
-import "./PricingModal.css";
+import "./pricingModal.css";
 
 export const PricingModal = component$(
   (props: {
