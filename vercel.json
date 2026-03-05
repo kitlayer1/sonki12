@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "src/routes/**/*.{tsx,js,ts}": {
+      "runtime": "nodejs@18.x"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)?service-worker.js",
