@@ -1,0 +1,102 @@
+.settings-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-md);
+}
+
+/* FULL WIDTH BORDER */
+.settings-bar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: var(--color-border-b1);
+}
+
+/* LEFT / RIGHT */
+.settings-bar-left,
+.settings-bar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* BASE BUTTON */
+.settings-btn {
+  font-family: "Geist-Medium", sans-serif;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-2xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+/* GHOST */
+.settings-btn.ghost {
+  background: transparent;
+  border: 1px solid var(--color-border-b1);
+  color: var(--color-heading);
+}
+
+.settings-btn.ghost:hover {
+  background-color: var(--color-border-b1);
+}
+
+.settings-btn.active {
+  background-color: var(--grey-50);
+  border-color: var(--color-border-b1);
+}
+
+/* PRIMARY */
+.settings-btn.primary {
+  background: var(--btn-black-bg);
+  color: var(--btn-black-text);
+  border: none;
+}
+
+.settings-btn.primary:hover {
+  background-color: var(--btn-black-bg-hover);
+}
+
+.settings-icon {
+  flex-shrink: 0;
+}
+
+/* ============================= */
+/* 📱 768px ALTINDA             */
+/* ============================= */
+
+@media (max-width: 600px) {
+  .settings-bar {
+    flex-direction: column;
+    align-items: stretch;
+  
+  }
+
+  .settings-bar-right {
+    order: -1;
+    width: 100%;
+  }
+
+  .settings-bar-right .settings-btn {
+    width: 100%;
+  }
+
+  .settings-bar-left {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

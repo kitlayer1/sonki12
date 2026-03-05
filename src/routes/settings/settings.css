@@ -1,0 +1,205 @@
+/* ==========================
+   LAYOUT
+========================== */
+.settings-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.settings-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.settings-container {
+  flex: 1;
+  background-color: var(--color-white);
+  padding: var(--spacing-2xl);
+  padding-top: var(--spacing-3xl);
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-header {
+  margin: 0;
+}
+
+.settings-title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-lg);
+  color: var(--color-heading);
+  margin-bottom: var(--spacing-sm);
+}
+
+.settings-description {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-md);
+  color: var(--color-description-p1);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* ==========================
+   SAVE ROW & BUTTON
+========================== */
+.save-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  justify-content: flex-end; /* butonu sağa yaslar */
+}
+
+.settings-save-btn {
+  font-family: "Geist-Medium", sans-serif;
+  height: 34px;
+  width: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--btn-black-bg);
+  color: var(--btn-black-text);
+}
+
+.settings-save-btn:hover {
+  background: var(--btn-black-bg-hover);
+  color: var(--btn-black-text);
+}
+
+.toast-notification {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: var(--line-height-xs);
+  position: fixed;
+  top: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-xs);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 9999;
+  animation: toast-slide 4s ease forwards;
+}
+
+/* SUCCESS */
+.toast-notification.success {
+  background-color: var(--success-100); /* yeşil */
+  color: var(--success-900);
+}
+
+/* ERROR */
+.toast-notification.error {
+  background-color: var(--error-100); /* kırmızı */
+  color: var(--error-900);
+}
+
+/* BADGE */
+.toast-badge {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-2xs);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: var(--line-height-xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+}
+
+/* Success badge */
+.toast-badge.success {
+  color: var(--success-900); /* yeşil */
+  border: 1px solid var(--success-200);
+}
+
+/* Error badge */
+.toast-badge.error {
+  color: var(--error-900); /* kırmızı */
+  border: 1px solid var(--error-200);
+}
+
+/* MESSAGE */
+.toast-message {
+  flex: 1;
+  white-space: nowrap;
+}
+
+/* CLOSE BUTTON */
+.close-toast {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Success toast close button */
+.toast-notification.success .close-toast {
+  color: var(--success-900); /* beyaz veya yeşil kontrast rengi */
+  border: 1px solid var(--success-200);
+}
+
+/* Error toast close button */
+.toast-notification.error .close-toast {
+  color: var(--error-900); /* beyaz veya kırmızı kontrast rengi */
+  border: 1px solid var(--error-200);
+}
+
+.close-toast svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* TOAST ANIMATION */
+@keyframes toast-slide {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding-top: var(--spacing-3xl);
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .settings-container {
+    padding-top: var(--spacing-3xl);
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 430px) {
+  .settings-container {
+    padding-top: var(--spacing-3xl);
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

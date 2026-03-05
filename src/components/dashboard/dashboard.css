@@ -1,0 +1,350 @@
+/* ============================= */
+/* CONTENT AREA */
+/* ============================= */
+
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  padding-top: var(--spacing-3xl);
+}
+
+.dashboard-container {
+  flex: 1;
+  background-color: var(--color-white);
+  padding: 0 var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================= */
+/* SECTION */
+/* ============================= */
+
+.section {
+  margin-bottom: 12px;
+}
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  align-items: stretch;
+}
+
+/* ============================= */
+/* LOGO CARD */
+/* ============================= */
+
+.logo-card,
+.create-logo-card {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  height: 100%;
+}
+
+.logo-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ============================= */
+/* DASHED WRAPPER */
+/* ============================= */
+
+.logo-content-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  height: 100%;
+}
+
+.logo-content-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-border-b1);
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+}
+
+/* ============================= */
+/* LOGO PREVIEW */
+/* ============================= */
+
+.logo-preview {
+  flex: 1;
+  min-height: 200px;
+  max-height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* ============================= */
+/* SVG WRAPPER */
+/* ============================= */
+
+.svg-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.svg-wrapper > svg {
+  width: 120% !important;
+  height: 120% !important;
+  max-width: none !important;
+  max-height: none !important;
+  transform-origin: center;
+  display: block;
+}
+
+/* ============================= */
+/* FALLBACK SVG */
+/* ============================= */
+
+.fallback-svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+}
+
+.fallback-svg > svg {
+  width: 80%;
+  height: 80%;
+}
+
+/* ============================= */
+/* INFO AREA */
+/* ============================= */
+
+.logo-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-2xs);
+  min-width: 0;
+}
+
+.brand-name {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-xs);
+  color: var(--color-heading-h1);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-lg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.created-date {
+  font-family: "Geist-Regular", sans-serif;
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-md);
+  color: var(--color-description-p1);
+}
+
+/* ============================= */
+/* MORE BUTTON */
+/* ============================= */
+
+.more-btn {
+  background: var(--color-white);
+  border: 1px solid var(--btn-border-bg);
+  border-radius: var(--radius-md);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.more-btn:hover {
+  background: var(--btn-border-bg-hover);
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* CREATE LOGO CARD */
+/* ============================= */
+
+.create-logo-card {
+  border: 1px solid var(--color-border-b1);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.create-logo-card:hover {
+  background: var(--btn-border-bg-hover);
+}
+
+.create-logo-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-align: center;
+}
+
+.create-logo-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.create-logo-texts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xs);
+}
+
+.create-logo-title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-lg);
+  color: var(--color-heading);
+}
+
+.create-logo-description {
+  font-family: "Geist-Regular", sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-sm);
+  letter-spacing: var(--letter-spacing-md);
+  color: var(--color-description);
+  max-width: 220px;
+}
+
+/* ============================= */
+/* EMPTY STATE */
+/* ============================= */
+
+.empty-banner {
+  width: 100%;
+  margin-top: 1px;
+}
+
+.empty-inner {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl) var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-b1);
+  background: var(--color-white);
+  text-align: center;
+}
+
+/* ============================= */
+/* SEE ALL BUTTON */
+/* ============================= */
+
+.see-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+.see-all-btn {
+  font-family: "Geist-Medium", sans-serif;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--btn-border-bg);
+  background: var(--color-white);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  color: var(--btn-border-text);
+  max-height: 34px;
+  transition: 0.2s ease;
+}
+
+.see-all-btn:hover {
+  border: 1px solid var(--btn-border-bg-hover);
+}
+
+/* ============================= */
+/* RESPONSIVE (SADELEŞTİRİLMİŞ) */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding-top: var(--spacing-2xl);
+  }
+
+  .dashboard-container {
+    padding: 0 var(--spacing-lg);
+  }
+
+  .logo-preview {
+    min-height: 180px;
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 430px) {
+  .dashboard-container {
+    padding: 42px var(--spacing-md);
+  }
+
+  .logo-preview {
+    min-height: 150px;
+    max-height: 150px;
+  }
+
+  .brand-name {
+    font-size: var(--font-size-2xs);
+  }
+
+  .create-logo-image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .empty-inner {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}

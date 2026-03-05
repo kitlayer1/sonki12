@@ -1,0 +1,155 @@
+.pricing-section {
+  padding: 160px 20px 80px 20px;
+  background: #FFFCF7;
+}
+
+.pricing-container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.pricing-headers {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 42px auto;
+}
+
+.pricing-title {
+     font-family: "Geist-SemiBold", sans-serif;
+  line-height: 1.1;
+  letter-spacing: -0.84px;
+  font-size: 42px;
+  margin-bottom: 16px;
+  color: var(--color-heading-h1);
+}
+
+.pricing-subtitle {
+     font-family: "Geist-Medium", sans-serif;
+  font-size:16px;
+  color: var(--color-description-p1);
+  max-width: 700px;
+  margin: 0 auto 32px auto;
+  line-height: 1.6;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pricing-card {
+  background: #FBF6F0;
+  padding: 32px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;          /* EKLENDİ */
+  flex-direction: column; 
+}
+
+
+.info-box {
+    font-family: "Geist-Medium", sans-serif;
+  background: #EDE3DA;
+  padding: 18px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 13px;
+  color:var(--color-heading-h1);
+  line-height: 1.4;
+  margin-top: auto;
+  text-align: center;
+}
+
+/* 🔥 SADECE 1 FEATURED */
+.featured {
+  border: 1.5px solid #201610;
+  transform: scale(1.03);
+}
+
+.plan-title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 20px;
+}
+
+.price {
+  font-family: "Geist-SemiBold", sans-serif;
+  margin: 24px 0;
+}
+
+.amount {
+  font-family: "Geist-Bold", sans-serif;
+  color: var(--color-heading-h1);
+  font-size: 40px;
+}
+
+.subtitle {
+  font-family: "Geist-Medium", sans-serif;
+  font-size: 14px;
+  color: #57514D;
+  margin-left: 6px;
+}
+
+.description {
+  font-family: "Geist-Medium", sans-serif;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(  --color-description-p2);
+}
+
+.pricing-btn {
+  font-family: "Geist-SemiBold", sans-serif;
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: var(--btn-black-bg);
+  color: white;
+}
+
+.primary-btn:hover {
+  background: var(--btn-black-bg-hover);
+}
+
+.secondary-btn {
+  background: #EDE3DA;
+  color: var(--color-heading-h1);
+}
+
+.secondary-btn:hover {
+  background: #E3D8CD;
+}
+
+.feature-list {
+  font-family: "Geist-Medium", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: var( --color-description-p1);
+  padding-bottom: 42px;
+}
+
+.feature-list li {
+  margin-bottom: 16px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}

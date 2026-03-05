@@ -1,0 +1,255 @@
+.brand-section {
+  background: #F8F6F2;
+  padding: 72px 0 0;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.brand-title {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -0.84px;
+  color: var( --color-heading-h1);
+  margin-bottom: 16px;
+}
+
+.brand-subtitle {
+  font-family: "Geist-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--color-description-p1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Slider */
+.cards-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  gap: 16px; /* Kartlar arası boşluk biraz artırıldı */
+  width: max-content;
+  animation: cardScroll 60s linear infinite;
+}
+
+.brand-card {
+  position: relative;
+  flex: 0 0 320px; /* Kart genişliği biraz artırıldı görsel uyum için */
+  height: 400px; /* Daha yüksek kartlar */
+  border-radius: 12px; /* Daha yuvarlak köşeler */
+  padding: 24px 16px;
+  box-sizing: border-box;
+  color: #fff;
+  overflow: hidden;
+  margin-top: 32px;
+}
+
+.technology {
+  background: #0f1e2a;
+} /* Koyu yeşil-mavi ton */
+.fashion {
+  background: #0d5b66;
+} /* Resimdeki teal ton */
+.food {
+  background: #6b552b;
+} /* Kahverengi */
+.health {
+  background: #4a1a3a;
+}
+.ecommerce {
+  background: #1F1B4B;
+}
+.education {
+  background: #042f2d;
+}
+.travel {
+  background: #550226;
+}
+.beauty {
+  background: #68261f;
+}
+.sports {
+  background: #272d06;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.brand-card h3 {
+  font-family: "Geist-SemiBold", sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.84px;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.brand-card p {
+  font-family: "Geist-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+  max-width: 260px;
+}
+
+/* Beyaz kutu (resimdeki büyük beyaz alan) */
+.white-box {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 296px;
+  height: 240px;
+  background: #ffffff;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+@keyframes cardScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.cards-slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 1000px) {
+  .brand-section {
+    padding: 0;
+  }
+
+  .brand-title {
+    font-size: 36px;
+  }
+
+  .brand-subtitle {
+    font-size: 16px;
+    padding: 0 24px;
+  }
+
+  .cards-slider {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .brand-card {
+    flex: 0 0 260px;
+    height: 320px;
+  }
+
+  .white-box {
+    width: 240px;
+    height: 160px;
+  }
+
+  .slider-track {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-section {
+    padding:  0;
+  }
+
+  .brand-title {
+    font-size: 36px;
+  }
+
+  .brand-subtitle {
+    font-size: 15px;
+    padding: 0 24px;
+  }
+
+  .cards-slider {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .brand-card {
+    flex: 0 0 260px;
+    height: 320px;
+  }
+
+  .white-box {
+    width: 240px;
+    height: 170px;
+  }
+
+  .slider-track {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-section {
+    padding:  0;
+  }
+
+  .brand-title {
+    font-size: 32px;
+    padding: 0 30px;
+  }
+
+  .brand-subtitle {
+    font-size: 14px;
+    padding: 0 30px;
+  }
+
+  .brand-card {
+    flex: 0 0 260px;
+    height: 300px;
+  }
+
+  .white-box {
+    width: 240px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 430px) {
+  .brand-section {
+    padding: 0;
+  }
+
+  .brand-title {
+    font-size: 30px;
+    padding: 0 24px;
+  }
+
+  .brand-subtitle {
+    font-size: 15px;
+    padding: 0px 24px;
+  }
+
+  .slider-track {
+    gap: 16px;
+  }
+
+  .brand-card h3 {
+    font-size: 18px;
+  }
+
+  .brand-card p {
+    font-size: 13px;
+  }
+
+
+}
